@@ -1,5 +1,6 @@
 package com.daniela.rodrigues.banklineapi.models;
 
-public class MovimentacaoTipo {
-
+public enum MovimentacaoTipo {
+       RECEITA,
+       DESPESA
 }
