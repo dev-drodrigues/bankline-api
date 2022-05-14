@@ -19,7 +19,7 @@ public class Movimentacao {
   	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Integer id;
         
-        @Column(name = "data-hora")
+        @Column(name = "data_hora")
         private LocalDateTime dataHora;
         
         @Column(name = "descricao")
