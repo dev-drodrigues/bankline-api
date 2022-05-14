@@ -15,9 +15,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="tab_movimentacao")
 public class Movimentacao {
-        public enum Movimentacaotipo {
-
-	}
         @Id
   	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Integer id;
@@ -25,13 +22,14 @@ public class Movimentacao {
         @Column(name = "data-hora")
         private LocalDateTime dataHora;
         
-        
+        @Column(name = "descricao")
         private String descricao;
         
+        @Column(name= "valor")
         private Double valor;
         
         @Enumerated(EnumType.STRING)
-        private Movimentacaotipo tipo;
+        private MovimentacaoTipo tipo;
 		public Integer getId() {
 			return id;
 		}
@@ -56,13 +54,14 @@ public class Movimentacao {
 		public void setValor(Double valor) {
 			this.valor = valor;
 		}
-		public Movimentacaotipo getTipo() {
+		public MovimentacaoTipo getTipo() {
 			return tipo;
 		}
-		public void setTipo(Movimentacaotipo tipo) {
+		public void setTipo(MovimentacaoTipo tipo) {
 			this.tipo = tipo;
 		}
         
-        
-        
 }
+ 
+        
+
